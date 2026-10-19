@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="registration-page">
+    <main>
+      <h1>Create an account</h1>
+      <p class="intro">Enter your details to register.</p>
+      <form id="registration-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            aria-describedby="name-error"
+          />
+          <p class="error" id="name-error"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            aria-describedby="email-error"
+          />
+          <p class="error" id="email-error"></p>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            aria-describedby="password-error"
+          />
+          <p class="error" id="password-error"></p>
+        </div>
+        <div class="field">
+          <label for="confirm-password">Confirm password</label>
+          <input
+            id="confirm-password"
+            name="confirm-password"
+            type="password"
+            required
+            aria-describedby="confirm-password-error"
+          />
+          <p class="error" id="confirm-password-error"></p>
+        </div>
+        <div class="field">
+          <label for="age">Age</label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            min="1"
+            step="1"
+            required
+            aria-describedby="age-error"
+          />
+          <p class="error" id="age-error"></p>
+        </div>
+        <button type="submit">Register</button>
+        <p
+          class="success"
+          id="form-success"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+      <nav><a href="data.html">View the data table</a></nav>
+    </main>
+    <script src="validation.js"></script>
+  </body>
+</html>
